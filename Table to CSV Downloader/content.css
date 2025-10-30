@@ -1,0 +1,38 @@
+/* This wrapper is added around each table to allow
+  for 'position: absolute' on the button.
+*/
+.table-csv-wrapper {
+  position: relative;
+  /* Use 'display: inline-block;' if tables are messing up layout,
+     but 'position: relative' is usually enough. */
+}
+
+.csv-download-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 100; /* Makes sure it's on top */
+  
+  /* Nice styling */
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  
+  /* Make it subtle until hover */
+  opacity: 0.3;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Show the button clearly on hover */
+.table-csv-wrapper:hover .csv-download-button {
+  opacity: 1;
+}
+
+.csv-download-button:hover {
+  background: #0056b3;
+}
